@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Scale Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>How are You Feeling Today?</h1>
+</header>
+
+<main>
+    <div class="scale-container">
+        <div class="labels">
+            <div class="label-container" data-value="0">
+                <span class="subtext">Not Depressed</span>
+                <span class="label">0</span>
+            </div>
+            <div class="label-container" data-value="1">
+                <span class="label">1</span>
+            </div>
+            <div class="label-container" data-value="2">
+                <span class="label">2</span>
+            </div>
+            <div class="label-container" data-value="3">
+                <span class="label">3</span>
+            </div>
+            <div class="label-container" data-value="4">
+                <span class="label">4</span>
+            </div>
+            <div class="label-container" data-value="5">
+                <span class="subtext"></span>
+                <span class="label">5</span>
+            </div>
+            <div class="label-container" data-value="6">
+                <span class="label">6</span>
+            </div>
+            <div class="label-container" data-value="7">
+                <span class="label">7</span>
+            </div>
+            <div class="label-container" data-value="8">
+                <span class="label">8</span>
+            </div>
+            <div class="label-container" data-value="9">
+                <span class="label">9</span>
+            </div>
+            <div class="label-container" data-value="10">
+                <span class="subtext">Severely Depressed</span>
+                <span class="label">10</span>
+            </div>
+        </div>
+
+        <input type="range" min="0" max="10" step="0.01" id="depression-slider">
+
+        <div class="faces">
+            <img src="ten_new.png" alt="No Pain" class="face face0 visible">
+            <img src="face1.png" alt="face 1" class="face face1">
+            <img src="Mild.png" alt="Mild" class="face face2">
+            <img src="face3.png" alt="face 3" class="face face3">
+            <img src="Moderate.png" alt="Moderate" class="face face4">
+            <img src="five_new.png" alt="face 5" class="face face5 visible">
+            <img src="Severe.png" alt="Severe" class="face face6">
+            <img src="face7.png" alt="face 7" class="face face7">
+            <img src="VerySevere.png" alt="Very Severe" class="face face8">
+            <img src="face9.png" alt="face 9" class="face face9">
+            <img src="one_new.png" alt="Worst Pain Possible" class="face face10 visible">
+        </div>
+    </div>
+
+    <form id="response-form">
+        <input type="hidden" id="slider-value" name="slider_value">
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+<div id="popup" class="popup">
+    <p id="popup-text"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
